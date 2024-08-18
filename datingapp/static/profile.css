@@ -1,0 +1,280 @@
+/*** global ***/
+
+body {
+  font-family: "Segoe UI";
+  background-image: url(pfps/pexels-codioful-7130555.jpg);
+  background-repeat: repeat-x;
+  height: 100%;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  transition: background-image 1s ease-in-out;
+}
+a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2em; 
+  
+}
+img {
+  border-radius: 50%;
+  border: solid rgba(255, 255, 255, 0.699);
+  border-width: 10px;
+}
+
+#error {
+  color:red
+}
+
+/***** INDEX *****/
+#index {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+#index_cont {
+  text-align: center; 
+  background-color: rgba(100, 100, 100, 0.521);
+  padding: 200px 150px 200px 150px;
+  border-radius: 5px;
+  color: white;
+}
+
+/********** Header **********/
+header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: dodgerblue;
+  width: 100%;
+  padding-left: 30px;
+  vertical-align: top;  
+
+}
+
+#links {
+  padding: 10px;
+  text-align: center;
+  width: calc(20%/5);
+  border-bottom: solid dodgerblue;
+}
+
+#links:hover {
+  border-bottom:solid aliceblue
+}
+/********** main page **********/
+
+#name {
+  display: flex;
+  justify-content: left;
+  margin: 20px;
+  
+}
+#info {
+  word-wrap: break-word;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.651);
+  margin: 20px;
+}
+
+img {
+  float: left;
+  margin-right: 2.5%;
+}
+/********** settings page **********/
+#aboutme {
+  display: flex;
+}
+
+textarea {
+  resize: none;
+}
+
+label {
+  font-weight: bold;
+}
+
+#curr {
+  background-color: grey;
+  color: white;
+  padding: 5px;
+}
+/*** find ***/
+#find {
+  display: flex;
+  flex-wrap: wrap;
+}
+#user {
+  position: relative; 
+  justify-content: center;
+  background-color: rgb(255, 255, 255, 0.7);
+  width: calc(80%/4);
+  border-radius: 5px;
+  padding-bottom: 20px; 
+  border: solid black;
+  margin: 20px;
+  height: 500px;
+  white-space: nowrap; 
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+#find {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px;
+  border: solid black;
+}
+
+#match_sent {
+  position: absolute; /* sticks to same spot in box */
+  bottom: 10px; 
+  transform: translateX(-50%); /* Adjust to center */
+  background-color: rgb(255, 120, 120);
+  color: white;
+  left: 50%;
+  padding: 5px;
+  border-radius: 5px;
+  z-index: 10;
+  transition: all 250ms;
+}
+
+#match_btn {
+  position: absolute; /* Absolute positioning */
+  bottom: 10px; /* 10px from the bottom of the container */
+  transform: translateX(-50%); /* Adjust to center */
+  background-color: red;
+  left: 50%;
+  padding: 5px;
+  border-radius: 5px;
+  z-index: 10;
+  transition: all 250ms;
+}
+
+#match_btn:hover {
+  background-color: rgb(255, 104, 104);
+  font-size: 26px;
+}
+
+/*** Matches ***/
+#matches {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  margin: 20px;
+}
+
+/* Ensure that the user_cont class also uses flexbox if needed */
+.user_cont {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center-align the content inside the user_cont */
+  max-height: 500px;
+  min-height: 500px;
+}
+
+#check_profile {
+  text-align: center;
+  position: absolute; /* Absolute positioning */
+  bottom: 10px; /* 10px from the bottom of the container */
+  transform: translateX(-50%); /* Adjust to center */
+  border: solid black;
+  background-color: dodgerblue;
+  padding: 5px;
+  border-radius: 5px;
+  z-index: 10;
+  transition: all 250ms;
+}
+
+#check_profile:hover {
+  background-color: rgb(102, 179, 255);
+  font-size: 26px;
+}
+#header2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 30px;
+}
+
+
+#option {
+  background-color: rgb(75, 165, 255);
+  border-bottom: solid grey;
+  padding-left: 15%;
+  padding-right: 15%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  transition: border-bottom-color 0.3s ease;
+}
+#curr_option {
+  background-color: rgb(75, 165, 255);
+  border-bottom: solid white;
+  padding-left: 15%;
+  padding-right: 15%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+#option:hover {
+  border-bottom:  solid rgb(190, 190, 190);
+} 
+
+/*** Reccomendations (ChatGPT) ***/
+  
+/* Ensure the slider displays elements in a horizontal row */
+
+.slider-container {
+  width: 90%; /* Adjust as needed */
+  overflow: hidden; /* Hide overflowing content */
+  margin: 20px;
+}
+
+.slider {
+  display: flex; /* Use flexbox for horizontal alignment */
+  overflow-x: scroll; /* Allow horizontal scrolling if necessary */
+  white-space: nowrap; /* Prevent text wrapping */
+  gap: 10px; /* Add some space between each user */
+  transition: transform 0.5s ease-in-out;
+  margin: 20px;
+}
+
+/* Style each user block */
+.user {
+  display: inline-block; /* Ensure each user block is treated as inline-block */
+  background-color: #f4f4f4; /* Background color for each user block */
+  padding: 10px; /* Padding around the content */
+  border-radius: 20px; /* Optional: Rounded corners */
+  text-align: center; /* Center-align the content inside */
+  min-width: calc(100% / 3); /* Show 3 users at once */
+  box-sizing: border-box;
+  overflow: hidden;
+  max-height: 550px;
+  min-height: 550px;
+  border: solid black
+}
+
+#sidebar {
+  margin-left: 20%;
+  margin-right: 5%;
+  padding: 20px;
+  height: calc(100vh - 49px); /* Fixed height for the sidebar */
+  overflow: hidden; /* Hide any overflowing content */
+  background-color: rgba(128, 128, 128, 0.331);
+  box-sizing: border-box; /* Include padding in the height calculation */
+}
+
+
+#sociallink{
+  color: blue;
+  text-decoration: underline;
+}

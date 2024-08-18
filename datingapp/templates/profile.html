@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link href="/static/profile.css" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <a id="links" href="{{ url_for('profile') }}">Home</a>
+      <a id="links" href="{{ url_for('find') }}">Find</a>
+      <a id="links" href="{{ url_for('matches') }}">Matches</a>
+      <a id="links" href="{{ url_for('settings_aboutme') }}">Settings</a>
+      <a id="links" href="{{ url_for('logout') }}">Logout</a>
+    </header>
+
+    <div id="main">
+      <div id="name">
+        <img src="{{ pfp }}" alt="pfp" width=200px height=200px>
+        <h1>Welcome, {{ username }}</h1>
+        <div id="imageslideshow"></div>
+      </div>
+      <div id="info">
+        <h1>About Me</h1>
+        {% if about != "aboutplaceholder" and about %}
+          <p>{{ about }}</p>
+        {% else %}
+          <a href="{{ url_for('settings_aboutme') }}">Write something about yourself!</a>
+        {% endif%}
+        <h2>Tags</h2>
+        {% if tags != "tagsplaceholder" and tags %}
+          <p>{{ tags }}</p>
+        {% else %}
+          <a href="{{ url_for('settings_aboutme') }}">Write some tags to get more matches!</a>
+        {% endif %}
+        <h2>Socials</h2>
+        {% if socials[0][0] %}
+          <a id="sociallink" href="{{socials[0][0]}}">{{ socials[0][0] }}</a><br>
+        {% endif %}
+        
+        {% if socials[1][0] %}
+          <a id="sociallink" href="{{socials[1][0]}}">{{ socials[1][0] }}</a><br>
+        {% endif %}
+        
+        {% if socials[2][0] %}
+          <a id="sociallink" href="{{socials[2][0]}}">{{ socials[2][0] }}</a><br>
+        {% endif %}
+        
+        {% if not socials[0][0] and not socials[1][0] and not socials[1][0]%}
+          <a id="sociallink" href="{{ url_for('settings_changeinfo')}}">No socials linked.</a>
+        {% endif %}
+      </div>
+      <hr>
+      
+      <div id="slider_container">
+        <div class="slider">
+          {% for i in range(user_data|length) %}
+          <div class="user">
+            <div class="user_cont">
+              <img src="static/pfps/{{user_data[i][4]}}" alt="{{user_data[i][4]}}" width=200px height=200px></img>
+              <p>{{user_data[i][2]}}</p>
+              <p>{{user_data[i][3]}}</p>
+              <p>{{user_data[i][0]}}</p><br>
+              {% if user_data[i][1] in sent %}
+              <p id="match_sent">match sent</p>
+              {% else %}
+              <a id="match_btn"href="{{ url_for('match_request', receiver=user_data[i][1] )}}">Match</a>
+              {% endif%}
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      <div>
+
+      </div>
+    </div>
+  </body>
+</html>

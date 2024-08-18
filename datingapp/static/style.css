@@ -1,0 +1,29 @@
+#index {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+  
+#index_cont {
+    text-align: center; 
+    background-color: rgba(100, 100, 100, 0.521);
+    padding: 200px 150px 200px 150px;
+    border-radius: 5px;
+    color: white;
+}
+
+body {
+    font-family: "Segoe UI";
+    height: 100%;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    transition: background-image 1s ease;
+}
