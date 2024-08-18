@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link href="/static/profile.css" rel="stylesheet">
+  </head>
+  <body>
+    
+    <header>
+      <a id="links" href="{{ url_for('profile') }}">Home</a>
+      <a id="links" href="{{ url_for('find') }}">Find</a>
+      <a id="links" href="{{ url_for('matches') }}">Matches</a>
+      <a id="links" href="{{ url_for('settings_aboutme') }}">Settings</a>
+      <a id="links" href="{{ url_for('logout') }}">Logout</a>
+    </header>
+    <div id='aboutme'>
+      <div id="sidebar">
+        <a id="curr"href="{{ url_for('settings_aboutme') }}">About Me</a>
+        <br><br>
+        <a href="{{ url_for('settings_changeinfo')}}">Personal Info</a>
+      </div>
+    <!-- change for each settings page -->
+      <div id="form">
+        <form action="/settings/aboutme/update_aboutme" method="POST">
+          <label for="aboutme">About Me</label>
+          <br><br>
+          <textarea type="text" name="aboutme" placeholder="Write something about yourself!" cols='60' rows='1'></textarea>
+          <br><br><br>
+          <label for="tags">Tags</label><br><br>
+          <textarea type="text" name="tags" placeholder="Write some tags to get more matches!" cols='60' rows='1'></textarea>
+          <br><br><br>
+          <input type="submit" value="Submit">
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
