@@ -22,7 +22,7 @@ Match handler has 3 columns, user_id, accepted, sent. If A sends B a request, us
 
 #How to use this webapp:
 1. Register
-2. Click settings. Set up your about me, tags, profile picture (profile picture doesnt work yet), social links. Include your interests in Tags to find others with same tags
+2. Click settings. Set up your about me, tags, profile picture (profile picture doesnt work yet on PythonAnywhere but works locally), social links. Include your interests in Tags to find others with same tags
 3. Click Find and find someone you want to match with. People who you have sent matches but not accepted your request yet can be seen in Matches > Pending. Or go to Matches > Requests and accept any matches you want to accept.
 4. Check Matches for your successful matches.
 5. Check your Matches' profile
