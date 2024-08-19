@@ -22,7 +22,7 @@ Match handler has 3 columns, user_id, accepted, sent. If A sends B a request, us
 
 #How to use this webapp:
 1. Register
-2. Click settings. Set up your about me, tags, profile picture, social links. Include your interests in Tags to find others with same tags
+2. Click settings. Set up your about me, tags, profile picture (profile picture doesnt work yet), social links. Include your interests in Tags to find others with same tags
 3. Click Find and find someone you want to match with. People who you have sent matches but not accepted your request yet can be seen in Matches > Pending. Or go to Matches > Requests and accept any matches you want to accept.
 4. Check Matches for your successful matches.
 5. Check your Matches' profile
@@ -38,3 +38,6 @@ CSS - I learn alot more about CSS. I learnt how to use display: flex;
 
 #What's next for the CCA webapp
 A chat feature is next for this webapp such that users can communicate on the web app instead of needing to add each other externally on other platforms such as Instagram. Improving of the recommendations algorithm. A random feature to randomly chat with people. In this random feature no information will be disclosed about each other and you can decide to match or not based on talking to them alone.
+
+#Disclaimer
+I am not responsible for content on other users' accounts and I do not condone any malicious and deragotory content on others' profiles.
